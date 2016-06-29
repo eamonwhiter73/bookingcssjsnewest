@@ -53,18 +53,27 @@ var arraypicked = ['node-433800199-1'];
         console.log(arraypicked);
 
         console.log(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')))]);
-        
-        jQuery(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')))]).css({
-          "display": "none"
-        })
-        
-        console.log(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')) + 1)]);
 
-        if(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')) + 1)]) {
+        var thisone = arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'));
+        
+        jQuery('div#' + arraypicked[parseInt(thisone)]).css('display', 'none');
+        
+        console.log(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'))) + 1]);
 
-          jQuery('div#' + arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')) + 1)] + '.zingtree-node').css({
-            "display": "block"
-          })
+        if(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'))) + 1 ]) {
+
+          if(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')) == arraypicked.lastIndexOf(jQuery('.zingtree-node:visible').prop('id'))) {
+
+            jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "");
+            jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "block");
+          }
+          else {
+
+            thisone = arraypicked.lastIndexOf(jQuery('.zingtree-node:visible').prop('id'));
+
+            jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "");
+            jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "block");
+          }
         }
         
         e.preventDefault();
@@ -74,14 +83,17 @@ var arraypicked = ['node-433800199-1'];
         console.log(arraypicked);
 
         console.log(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')))]);
+
+        var thisone = arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'));
         
-        jQuery(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')))]).css({
-          "display": "none"
-        })
+        jQuery('div#' + arraypicked[parseInt(thisone)]).css('display', 'none');
+
+        jQuery('div#' + arraypicked[parseInt(thisone)  - 1 ] + '.zingtree-node').css("display", "");
+        jQuery('div#' + arraypicked[parseInt(thisone)  - 1 ] + '.zingtree-node').css("display", "block");
+
+
         
-        jQuery('div#' + arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')) - 1)] + '.zingtree-node').css({
-          "display": "block"
-        })
+        
         
         e.preventDefault();
       });
