@@ -316,6 +316,7 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 .toolTipBP {
     display: inline-block;
     position:absolute;
+    right:0vh;
     height:9vh;
     top: 50%;
     transform: translateY(-50%);
