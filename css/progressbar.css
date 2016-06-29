@@ -282,14 +282,14 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 
 #infoPanelBPmobile{
     background-color: rgb(231,252,255);
-    width: 100%;
+    width: 96vw;
     display: inline-block;
     margin-left: 0;
     margin-right: 0;
     height: 100%;
     position: absolute;
     white-space: pre-line;
-    z-index: 99999;
+    z-index: 99998;
     color: rgb(8,113,125);
     text-align: center;
     padding-top: 3vh;
@@ -330,6 +330,51 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 
 #logo-slider-wraper { margin: 0 auto; }
 
+.exactly {
+        background-color: rgb(231,252,255);
+            z-index: 99998;
+            height: 100%;
+            position: relative;
+
+    }
+
+    .exactlyis {
+        background-color: rgb(231,252,255);   
+            z-index: 99998;
+            height: 15%;
+            padding-top: 3.5vh;
+            color: #000;
+            font-style: bold;
+            font-size: 4vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            text-align: center;
+
+    }
+
+    .exactsub {
+        background-color: rgb(231,252,255);  
+            z-index: 99998;
+            height: 15%;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            padding-top: 1vh;
+            color: #000;
+            
+ 
+    }
+
+    .panelvid {
+        background-color: rgb(231,252,255) ;
+            z-index: 99998;
+            height: 50%;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            
+  
+    }
+
 @media (min-width: 1200px) {
     /*NOTHING HAPPENS*/
     #infoPanelBPmobile {
@@ -357,6 +402,47 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 
 /* Portrait phones and smaller */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .exactly {
+        background-color: rgb(231,252,255);
+            z-index: 99998;
+            height: 100%;
+            position: relative;
+
+    }
+
+    .exactlyis {
+        background-color: rgb(231,252,255);   
+            z-index: 99998;
+            height: 20%;
+            padding-top: 6vh;
+            color: #000;
+            font-style: bold;
+            font-size: 4vh;
+            padding-left: 9vw;
+            padding-right: 9vw;
+
+    }
+
+    .exactsub {
+        background-color: rgb(231,252,255);  
+            z-index: 99998;
+            height: 20%;
+            padding-left: 9vw;
+            padding-right: 9vw;
+            color: #000;
+            
+ 
+    }
+
+    .panelvid {
+        background-color: rgb(231,252,255) ;
+            z-index: 99998;
+            height: 50%;
+            width: 100%;
+            position: relative;
+            
+  
+    }
     .circle {
         width: 6vh;
         height:0;
@@ -430,10 +516,61 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
     .progress-indicator {
         margin-left: 2%;
     }
+
+    #infoPanelBPmobile{
+        width: 98vw;
+        padding-top: 0;
+    }
 }
 
 /* Portrait phones and smaller */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
+    .exactly {
+        background-color: rgb(231,252,255);
+            z-index: 99998;
+            height: 100%;
+            position: relative;
+
+    }
+
+    .exactlyis {
+        background-color: rgb(231,252,255);   
+            z-index: 99998;
+            height: 20%;
+            padding-top: 6vh;
+            color: #000;
+            font-style: bold;
+            font-size: 4vh;
+            padding-left: 9vw;
+            padding-right: 9vw;
+
+    }
+
+    .exactsub {
+        background-color: rgb(231,252,255);  
+            z-index: 99998;
+            height: 20%;
+            padding-left: 9vw;
+            padding-right: 9vw;
+            color: #000;
+            
+ 
+    }
+
+    .panelvid {
+        background-color: rgb(231,252,255) ;
+            z-index: 99998;
+            height: 50%;
+            width: 100%;
+            position: relative;
+            
+  
+    }
+
+    #infoPanelBPmobile{
+        padding-top: 0;
+    }
+
     .circle {
         width: 4vh;
         height:0;
