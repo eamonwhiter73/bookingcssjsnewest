@@ -1,0 +1,674 @@
+body {
+    margin: 0;
+}
+
+.progress-indicator {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.progress-indicator>li {
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    flex: 1
+}
+
+.progress-indicator {
+    margin: 0 0 0;
+    padding: 0; 
+    font-size: 80%;
+    height: 15vh;
+    text-transform: uppercase;
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+}
+
+.toprect {
+    position: absolute;
+    top: 0;
+    height: 44%;
+    width: 85%;
+    background-color: #056B77;
+    z-index: 3;
+    border-bottom-color: #fff;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.bottomrect {
+    position: absolute;
+    bottom: 0;
+    height: 44%;
+    width: 85%;
+    background-color: #056B77;
+    z-index: 3;
+    border-top-color: #fff;
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+
+.proglogo {
+    background-color: #056B77;
+    width: 22%; /*vh*/
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+
+.logo {
+    margin-right: 17%;
+    max-width: 20vh;
+    max-height: 20vh;
+    float: right;
+}
+
+.leftspace {
+    background-color: #056B77;
+    width: 7%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 4;
+}
+
+.progress-indicator>li {
+    list-style: none;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-overflow: ellipsis;
+    color: #bbb;
+    display: block;
+    vertical-align: center;
+}
+
+.circle {
+    width: 9vh;
+    height:0;
+    padding-bottom: 9vh;
+    margin-top: 2.6vh;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    z-index: 5;
+    margin-left: 3%;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+.circle:hover {
+    width: 10vh;
+    padding-bottom: 10vh;
+    bottom: 2.5vh;
+    left: -2px;
+}
+
+.active:hover {
+    background-color: rgba(144, 195, 212, 1.0);
+    width: 10vh;
+    padding-bottom: 10vh;
+    bottom: 2.45vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.bubble {
+    border-radius: 1000px;
+    width: 6%;
+    height: 62%;
+    background-color: #fff;
+    display: block;
+    margin-left: 4%;
+    margin-top: 1.7%;
+    padding: 0;
+    position: absolute;
+    z-index: 99999;
+}
+
+.active {
+    background-color: rgba(144, 195, 212, 1.0);
+    width: 10vh;
+    padding-bottom: 10vh;
+    bottom: 2.45vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.toanimate {
+    width: 85%;
+    height: 100%;
+    z-index: 2;
+    right: 85.2%;
+    background-color: #21B4C4;
+    position: absolute;
+}
+
+.toanimateactive {
+    position: absolute;
+    right: 0;
+    width: 21%;
+    height: 100%;
+    background-color: #90C3D4;
+}
+
+.completed {
+    background-color: #21B4C4;
+    bottom: 3vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.completed:hover {
+    background-color: #21B4C4;
+    bottom: 2.5vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.bubtwo {
+    margin-left: 21%;
+}
+
+.bubthree {
+    margin-left: 39%;
+}
+
+.bubfour {
+    margin-left: 57%;
+}
+
+.bubfive {
+    margin-left: 75%;
+}
+
+.bubble:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+@media handheld,
+screen and (max-width: 400px) {
+    .progress-indicator {
+        font-size: 60%
+    }
+}
+
+#overlayBP {
+    background:rgba(0,0,0,0.3);
+    display:none;
+    width:100%; height:500%;
+    position:absolute; top:0; left:0; z-index:99998;
+}
+
+/* custom CSS for Zingtree panels style - change these colors to suit your taste*/
+
+/* question area for panels style */
+.list-group-item-question {
+    background-color: #CC751D;  
+}
+
+/* custom button color for buttons style */
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #CC1D1D;
+    border-color: #CC1D1D;
+}
+
+
+
+
+/* chevron in answers area of panels style 
+you can change this to any of the icons in the FontAwesome set. Substitute the unicode value for the icon
+
+The complete list icons are here:
+http://fortawesome.github.io/Font-Awesome/icons/
+
+In this example, we are using fa-arrow-right to overwrite fa-chevron.
+fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Font-Awesome/icon/arrow-right/
+
+*/
+
+.fa-chevron-right:before {
+    content: "\f061";
+}
+
+#qa-area {
+    position:relative;
+    display: inline-block;
+}
+
+.panel-body {
+    background-color: #ffffff; 
+    border-top-style: none;
+    font-size: 2vh;
+    color: #000;
+}
+
+.panel-primary>.panel-heading {
+    background-color: rgb(5,107,119); 
+    border-style: none;
+}
+
+.panel-title {
+    background-color: rgb(5,107,119);
+}
+
+/* beging custom styling of zing tree functionality and info panel BP */
+
+#infoPanelBP{
+    /* min-height:300px; /* prevent too much shrinkage on low answer questions */
+    background-color: rgb(231,252,255);
+    width: 60%;
+    display: inline-block;
+    /* right: 15px; */
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    position: absolute;
+    white-space: pre-line;
+    z-index: 99998;
+}
+
+#infoPanelBPmobile{
+    /* min-height:300px; /* prevent too much shrinkage on low answer questions */
+    background-color: rgb(231,252,255);
+    width: 92%;
+    display: inline-block;
+    /* right: 15px; */
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    position: absolute;
+    white-space: pre-line;
+    z-index: 99999;
+    color: rgb(8,113,125);
+    text-align: center;
+    padding-top: 3vh;
+    /*top: 70vh;*/
+    vertical-align: top;
+}
+
+.panel-primary {
+    overflow: hidden;
+    position: relative;
+}
+
+#infoPanelBP > p {
+
+    margin-left:20px;
+    margin-top:20px;
+
+}
+
+.answers {position:relative; width: 100%; display: inline-block;}
+
+.toolTipBP > img {
+  /*  height:45px; */
+  max-width:100%;
+   /* padding-bottom:5px; */
+   max-height:100%;
+
+}
+
+.toolTipBP {
+    display: inline-block;
+    position:absolute;
+    right:1vh;
+    /*bottom:2vh*/
+    height:8vh;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toolTipBP:hover {
+
+background-color:rgba(0, 173, 255, 0.13);
+
+}
+
+#logo-slider-wraper {margin: 0 auto;}
+
+/* Landscape tablets and medium desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .logo {
+        margin-right: 0;
+    }
+}
+
+/* Portrait phones and smaller */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .circle {
+        width: 6vh;
+        height:0;
+        padding-bottom: 6vh;
+        bottom: 4.4vh;
+        -moz-border-radius: 50%; 
+        -webkit-border-radius: 50%; 
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 5;
+        margin-left: 3%;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+    }
+
+    .circle:hover {
+        width: 7vh;
+        padding-bottom: 7vh;
+        bottom: 3.9vh;
+        left: -3px;
+    }
+
+    .bubone {
+
+    }
+
+    .bubtwo {
+        margin-left: 21%;
+    }
+
+    .bubthree {
+        margin-left: 39%;
+    }
+
+    .bubfour {
+        margin-left: 57%;
+    }
+
+    .bubfive {
+        margin-left: 75%;
+    }
+
+    .completed {
+    background-color: #21B4C4;
+    bottom: 2.9vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.completed:hover {
+    background-color: #21B4C4;
+    bottom: 2.4vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.active:hover {
+    width: 7vh;
+    padding-bottom: 7vh;
+    bottom: 3.8vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.active {
+    background-color: rgba(144, 195, 212, 1.0);
+    width: 7vh;
+    padding-bottom: 7vh;
+    bottom: 3.8vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.leftspace {
+    background-color: #056B77;
+    width: 18vw;
+    height: 100%;
+    position: absolute;
+    left: -8vw;
+    z-index: 4;
+}
+
+.progress-indicator {
+    margin-left: 2%;
+}
+
+
+}
+
+/* Portrait phones and smaller */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .circle {
+        width: 4vh;
+        height:0;
+        padding-bottom: 4vh;
+        bottom: 1.9vh;
+        -moz-border-radius: 50%; 
+        -webkit-border-radius: 50%; 
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 5;
+        margin-left: 3%;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+    }
+
+    .circle:hover {
+        width: 5vh;
+        padding-bottom: 5vh;
+        bottom: 1.6vh;
+        left: -3px;
+    }
+
+    .bubone {
+
+    }
+
+    .bubtwo {
+        margin-left: 21%;
+    }
+
+    .bubthree {
+        margin-left: 39%;
+    }
+
+    .bubfour {
+        margin-left: 57%;
+    }
+
+    .bubfive {
+        margin-left: 75%;
+    }
+
+    .completed {
+    background-color: #21B4C4;
+    bottom: 1.9vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.completed:hover {
+    background-color: #21B4C4;
+    bottom: 1.6vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.active:hover {
+    width: 5vh;
+    padding-bottom: 5vh;
+    bottom: 1.4vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.active {
+    background-color: rgba(144, 195, 212, 1.0);
+    width: 5vh;
+    padding-bottom: 5vh;
+    bottom: 1.4vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.leftspace {
+    background-color: #056B77;
+    width: 13%;
+    height: 100%;
+    position: absolute;
+    left: -7%;
+    z-index: 4;
+}
+
+.progress-indicator {
+    margin-left: 5%;
+}
+
+.toprect {
+    height: 46%;
+}
+
+.bottomrect {
+    height: 46%;
+}
+
+}
+
+
+
+/* Portrait phones and smaller */
+@media (max-width: 320px) {
+    .circle {
+        width: 4vh;
+        height:0;
+        padding-bottom: 4vh;
+        bottom: 1.9vh;
+        -moz-border-radius: 50%; 
+        -webkit-border-radius: 50%; 
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 5;
+        margin-left: 3%;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+    }
+
+    .circle:hover {
+        width: 5vh;
+        padding-bottom: 5vh;
+        bottom: 1.6vh;
+        left: -3px;
+    }
+
+    .bubone {
+
+    }
+
+    .bubtwo {
+        margin-left: 21%;
+    }
+
+    .bubthree {
+        margin-left: 39%;
+    }
+
+    .bubfour {
+        margin-left: 57%;
+    }
+
+    .bubfive {
+        margin-left: 75%;
+    }
+
+    .completed {
+    background-color: #21B4C4;
+    bottom: 1.9vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.completed:hover {
+    background-color: #21B4C4;
+    bottom: 1.6vh;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.active:hover {
+    width: 5vh;
+    padding-bottom: 5vh;
+    bottom: 1.4vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.active {
+    background-color: rgba(144, 195, 212, 1.0);
+    width: 5vh;
+    padding-bottom: 5vh;
+    bottom: 1.4vh;
+    left: -2px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+.leftspace {
+    background-color: #056B77;
+    width: 13%;
+    height: 100%;
+    position: absolute;
+    left: -7%;
+    z-index: 4;
+}
+
+.progress-indicator {
+    margin-left: 7vw;
+}
+
+.toprect {
+    height: 46%;
+}
+
+.bottomrect {
+    height: 46%;
+}
+
+}
