@@ -1,3 +1,5 @@
+/*GENERAL*/
+
 body {
     margin: 0;
 }
@@ -6,13 +8,7 @@ body {
     display: none;
 }
 
-.displaynone {
-    display: none
-}
-
-.displayblock {
-    display: block
-}
+/*PROGRESBAR*/
 
 .progress-indicator {
     display: -webkit-box;
@@ -23,6 +19,18 @@ body {
 }
 
 .progress-indicator>li {
+    list-style: none;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-overflow: ellipsis;
+    color: #bbb;
+    display: block;
+    vertical-align: center;
+
     -ms-flex: 1;
     -webkit-flex: 1;
     -moz-flex: 1;
@@ -89,20 +97,7 @@ body {
     z-index: 4;
 }
 
-.progress-indicator>li {
-    list-style: none;
-    text-align: center;
-    width: 20%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    text-overflow: ellipsis;
-    color: #bbb;
-    display: block;
-    vertical-align: center;
-}
-
+/*INITIAL BAR CIRCLES*/
 .circle {
     width: 9vh;
     height:0;
@@ -138,19 +133,6 @@ body {
     box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
 }
 
-.bubble {
-    border-radius: 1000px;
-    width: 6%;
-    height: 62%;
-    background-color: #fff;
-    display: block;
-    margin-left: 4%;
-    margin-top: 1.7%;
-    padding: 0;
-    position: absolute;
-    z-index: 99999;
-}
-
 .active {
     background-color: rgba(144, 195, 212, 1.0);
     width: 10vh;
@@ -160,23 +142,6 @@ body {
     -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
     -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
     box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
-
-.toanimate {
-    width: 85%;
-    height: 100%;
-    z-index: 2;
-    right: 85.2%;
-    background-color: #21B4C4;
-    position: absolute;
-}
-
-.toanimateactive {
-    position: absolute;
-    right: 0;
-    width: 21%;
-    height: 100%;
-    background-color: #90C3D4;
 }
 
 .completed {
@@ -195,6 +160,25 @@ body {
     box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
 }
 
+/*BAR ANIMATE CLASSES*/
+.toanimate {
+    width: 85%;
+    height: 100%;
+    z-index: 2;
+    right: 85.2%;
+    background-color: #21B4C4;
+    position: absolute;
+}
+
+.toanimateactive {
+    position: absolute;
+    right: 0;
+    width: 21%;
+    height: 100%;
+    background-color: #90C3D4;
+}
+
+/*CIRCLE IDENTIFIER CLASSES*/
 .bubtwo {
     margin-left: 21%;
 }
@@ -211,24 +195,11 @@ body {
     margin-left: 75%;
 }
 
-.bubble:hover {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-}
-
 @media handheld,
 screen and (max-width: 400px) {
     .progress-indicator {
         font-size: 60%
     }
-}
-
-#overlayBP {
-    background:rgba(0,0,0,0.3);
-    display:none;
-    width:100%; height:500%;
-    position:absolute; top:0; left:0; z-index:99998;
 }
 
 /* custom CSS for Zingtree panels style - change these colors to suit your taste*/
@@ -239,11 +210,17 @@ screen and (max-width: 400px) {
 }
 
 /* custom button color for buttons style */
-
 .btn-primary {
     color: #ffffff;
     background-color: #CC1D1D;
     border-color: #CC1D1D;
+}
+
+#overlayBP {
+    background:rgba(0,0,0,0.3);
+    display:none;
+    width:100%; height:500%;
+    position:absolute; top:0; left:0; z-index:99998;
 }
 
 
@@ -263,6 +240,8 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 .fa-chevron-right:before {
     content: "\f061";
 }
+
+/*PANELS*/
 
 #qa-area {
     position:relative;
@@ -285,14 +264,12 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
     background-color: rgb(5,107,119);
 }
 
-/* beging custom styling of zing tree functionality and info panel BP */
+/* begin custom styling of zingtree functionality and infopanelBP */
 
 #infoPanelBP{
-    /* min-height:300px; /* prevent too much shrinkage on low answer questions */
     background-color: rgb(231,252,255);
     width: 60%;
     display: inline-block;
-    /* right: 15px; */
     margin-left: 0;
     margin-right: 0;
     height: 100%;
@@ -302,11 +279,9 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 }
 
 #infoPanelBPmobile{
-    /* min-height:300px; /* prevent too much shrinkage on low answer questions */
     background-color: rgb(231,252,255);
     width: 92%;
     display: inline-block;
-    /* right: 15px; */
     margin-left: 0;
     margin-right: 0;
     height: 100%;
@@ -316,7 +291,6 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
     color: rgb(8,113,125);
     text-align: center;
     padding-top: 3vh;
-    /*top: 70vh;*/
     vertical-align: top;
 }
 
@@ -326,39 +300,32 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 }
 
 #infoPanelBP > p {
-
     margin-left:20px;
     margin-top:20px;
-
 }
 
-.answers {position:relative; width: 100%; display: inline-block;}
+.answers { position:relative; width: 100%; display: inline-block; }
+
+/*QUESTION MARK */
 
 .toolTipBP > img {
-  /*  height:45px; */
   max-width:100%;
-   /* padding-bottom:5px; */
-   max-height:100%;
-
+  max-height:100%;
 }
 
 .toolTipBP {
     display: inline-block;
     position:absolute;
-    right:1vh;
-    /*bottom:2vh*/
-    height:8vh;
+    height:9vh;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .toolTipBP:hover {
-
-background-color:rgba(0, 173, 255, 0.13);
-
+    background-color: rgba(144, 195, 212, 1.0)
 }
 
-#logo-slider-wraper {margin: 0 auto;}
+#logo-slider-wraper { margin: 0 auto; }
 
 /* Landscape tablets and medium desktops */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -398,77 +365,55 @@ background-color:rgba(0, 173, 255, 0.13);
         left: -3px;
     }
 
-    .bubone {
-
-    }
-
-    .bubtwo {
-        margin-left: 21%;
-    }
-
-    .bubthree {
-        margin-left: 39%;
-    }
-
-    .bubfour {
-        margin-left: 57%;
-    }
-
-    .bubfive {
-        margin-left: 75%;
-    }
-
     .completed {
-    background-color: #21B4C4;
-    bottom: 2.9vh;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+        background-color: #21B4C4;
+        bottom: 2.9vh;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.completed:hover {
-    background-color: #21B4C4;
-    bottom: 2.4vh;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .completed:hover {
+        background-color: #21B4C4;
+        bottom: 2.4vh;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.active:hover {
-    width: 7vh;
-    padding-bottom: 7vh;
-    bottom: 3.8vh;
-    left: -2px;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .active:hover {
+        width: 7vh;
+        padding-bottom: 7vh;
+        bottom: 3.8vh;
+        left: -2px;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.active {
-    background-color: rgba(144, 195, 212, 1.0);
-    width: 7vh;
-    padding-bottom: 7vh;
-    bottom: 3.8vh;
-    left: -2px;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .active {
+        background-color: rgba(144, 195, 212, 1.0);
+        width: 7vh;
+        padding-bottom: 7vh;
+        bottom: 3.8vh;
+        left: -2px;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.leftspace {
-    background-color: #056B77;
-    width: 18vw;
-    height: 100%;
-    position: absolute;
-    left: -8vw;
-    z-index: 4;
-}
+    .leftspace {
+        background-color: #056B77;
+        width: 18vw;
+        height: 100%;
+        position: absolute;
+        left: -8vw;
+        z-index: 4;
+    }
 
-.progress-indicator {
-    margin-left: 2%;
-}
-
-
+    .progress-indicator {
+        margin-left: 2%;
+    }
 }
 
 /* Portrait phones and smaller */
@@ -497,84 +442,63 @@ background-color:rgba(0, 173, 255, 0.13);
         left: -3px;
     }
 
-    .bubone {
-
-    }
-
-    .bubtwo {
-        margin-left: 21%;
-    }
-
-    .bubthree {
-        margin-left: 39%;
-    }
-
-    .bubfour {
-        margin-left: 57%;
-    }
-
-    .bubfive {
-        margin-left: 75%;
-    }
-
     .completed {
-    background-color: #21B4C4;
-    bottom: 1.9vh;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+        background-color: #21B4C4;
+        bottom: 1.9vh;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.completed:hover {
-    background-color: #21B4C4;
-    bottom: 1.6vh;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .completed:hover {
+        background-color: #21B4C4;
+        bottom: 1.6vh;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.active:hover {
-    width: 5vh;
-    padding-bottom: 5vh;
-    bottom: 1.4vh;
-    left: -2px;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .active:hover {
+        width: 5vh;
+        padding-bottom: 5vh;
+        bottom: 1.4vh;
+        left: -2px;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.active {
-    background-color: rgba(144, 195, 212, 1.0);
-    width: 5vh;
-    padding-bottom: 5vh;
-    bottom: 1.4vh;
-    left: -2px;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .active {
+        background-color: rgba(144, 195, 212, 1.0);
+        width: 5vh;
+        padding-bottom: 5vh;
+        bottom: 1.4vh;
+        left: -2px;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.leftspace {
-    background-color: #056B77;
-    width: 13%;
-    height: 100%;
-    position: absolute;
-    left: -7%;
-    z-index: 4;
-}
+    .leftspace {
+        background-color: #056B77;
+        width: 13%;
+        height: 100%;
+        position: absolute;
+        left: -7%;
+        z-index: 4;
+    }
 
-.progress-indicator {
-    margin-left: 5%;
-}
+    .progress-indicator {
+        margin-left: 5%;
+    }
 
-.toprect {
-    height: 46%;
-}
+    .toprect {
+        height: 46%;
+    }
 
-.bottomrect {
-    height: 46%;
-}
-
+    .bottomrect {
+        height: 46%;
+    }
 }
 
 
@@ -605,82 +529,61 @@ background-color:rgba(0, 173, 255, 0.13);
         left: -3px;
     }
 
-    .bubone {
-
-    }
-
-    .bubtwo {
-        margin-left: 21%;
-    }
-
-    .bubthree {
-        margin-left: 39%;
-    }
-
-    .bubfour {
-        margin-left: 57%;
-    }
-
-    .bubfive {
-        margin-left: 75%;
-    }
-
     .completed {
-    background-color: #21B4C4;
-    bottom: 1.9vh;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+        background-color: #21B4C4;
+        bottom: 1.9vh;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.completed:hover {
-    background-color: #21B4C4;
-    bottom: 1.6vh;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .completed:hover {
+        background-color: #21B4C4;
+        bottom: 1.6vh;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.active:hover {
-    width: 5vh;
-    padding-bottom: 5vh;
-    bottom: 1.4vh;
-    left: -2px;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .active:hover {
+        width: 5vh;
+        padding-bottom: 5vh;
+        bottom: 1.4vh;
+        left: -2px;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.active {
-    background-color: rgba(144, 195, 212, 1.0);
-    width: 5vh;
-    padding-bottom: 5vh;
-    bottom: 1.4vh;
-    left: -2px;
-    -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-    box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
-}
+    .active {
+        background-color: rgba(144, 195, 212, 1.0);
+        width: 5vh;
+        padding-bottom: 5vh;
+        bottom: 1.4vh;
+        left: -2px;
+        -moz-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: inset 1px 1px 1px rgba(155, 155, 155, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+    }
 
-.leftspace {
-    background-color: #056B77;
-    width: 13%;
-    height: 100%;
-    position: absolute;
-    left: -7%;
-    z-index: 4;
-}
+    .leftspace {
+        background-color: #056B77;
+        width: 13%;
+        height: 100%;
+        position: absolute;
+        left: -7%;
+        z-index: 4;
+    }
 
-.progress-indicator {
-    margin-left: 7vw;
-}
+    .progress-indicator {
+        margin-left: 7vw;
+    }
 
-.toprect {
-    height: 46%;
-}
+    .toprect {
+        height: 46%;
+    }
 
-.bottomrect {
-    height: 46%;
-}
-
+    .bottomrect {
+        height: 46%;
+    }
 }
