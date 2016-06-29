@@ -384,6 +384,14 @@ jQuery(document).ready(function() {
         'margin-left': '-10%',
         'width': "22%"
       });
+
+      jQuery("div.panel-heading").css({
+        "height": ""
+      });
+
+      jQuery("div.progress-indicator").css({
+        "height": ""
+      });
     }
 
     if(jQuery(window).width() > 768 && jQuery(window).width() < 992) {
@@ -421,7 +429,12 @@ jQuery(document).ready(function() {
       });
 
       jQuery('.progress-indicator').css({
-        "margin-left": "4%"
+        "margin-left": "4%",
+        "height": ""
+      });
+
+      jQuery("div.panel-heading").css({
+        "height": ""
       });
 
       jQuery(".leftspace").css({
@@ -441,6 +454,14 @@ jQuery(document).ready(function() {
       jQuery('a.btn-zingtree.list-group-item').css({
         "font-size": "2.4vh"
       })
+
+      jQuery('.progress-indicator').css({
+        "height": ""
+      });
+
+      jQuery("div.panel-heading").css({
+        "height": ""
+      });
     }
   });
     
@@ -703,7 +724,12 @@ jQuery(document).ready(function() {
       });
 
       jQuery(".progress-indicator").css({
-        'margin-left': '6%'
+        'margin-left': '6%',
+        "height": ""
+      });
+
+      jQuery("div.panel-heading").css({
+        "height": ""
       });
 
       jQuery(".toprect").css({
@@ -747,7 +773,12 @@ jQuery(document).ready(function() {
       });
 
       jQuery('.progress-indicator').css({
-        "margin-left": "4%"
+        "margin-left": "4%",
+        "height": ""
+      });
+
+      jQuery("div.panel-heading").css({
+        "height": ""
       });
 
       jQuery(".leftspace").css({
@@ -762,7 +793,6 @@ jQuery(document).ready(function() {
       jQuery('#main-footer').show();
       jQuery('h1.entry-title').show();
       jQuery('.widewrapper>.container>.row').show(); 
-      jQuery('.infoPanelBPmobile').hide();
 
 
       jQuery('a.btn-zingtree.list-group-item').css({
@@ -792,7 +822,12 @@ jQuery(document).ready(function() {
       });
 
       jQuery('.progress-indicator').css({
-        "margin-left": "4%"
+        "margin-left": "4%",
+        "height": ""
+      });
+
+      jQuery("div.panel-heading").css({
+        "height": ""
       });
 
       jQuery(".leftspace").css({
@@ -806,20 +841,28 @@ jQuery(document).ready(function() {
       jQuery('div#title_row').show(); 
       jQuery('#main-footer').show();
       jQuery('.widewrapper>.container>.row').show(); 
-                jQuery('.infoPanelBPmobile').hide();
+      jQuery('.infoPanelBPmobile').hide();
 
       jQuery('a.btn-zingtree.list-group-item').css({
         "font-size": "2.4vh"
       })
+
+      jQuery('.progress-indicator').css({
+        "height": ""
+      });
+
+      jQuery("div.panel-heading").css({
+        "height": ""
+      });
     }
   });
 
-  function helpAnimate() {
-    jQuery('.bubtwo').addClass('active');
-    jQuery('.bubtwo').nextAll().removeClass('completed');
-    jQuery('.bubtwo').nextAll().removeClass('active');
-    jQuery('.bubtwo').nextAll().addClass('todo');
-    jQuery('.bubtwo').prevAll().addClass('completed');
+  function helpAnimate(classis) {
+    jQuery(classis).addClass('active');
+    jQuery(classis).nextAll().removeClass('completed');
+    jQuery(classis).nextAll().removeClass('active');
+    jQuery(classis).nextAll().addClass('todo');
+    jQuery(classis).prevAll().addClass('completed');
   }
 
   jQuery("span#node-title").hide();
@@ -831,26 +874,21 @@ jQuery(document).ready(function() {
     jQuery('.bubone').nextAll().removeClass('active');
     jQuery('.bubone').nextAll().addClass('todo');
   }
-  else {
-    helpAnimate();
-  }
-
-  //FOR OTHER ANIMATE BREAKPOINTS
-  /*if(jQuery('.toanimate').css("right") === "67.2%") {
-    helpAnimate();
+  if(jQuery('.toanimate').css("right") === "67.2%") {
+    helpAnimate('.bubtwo');
   }
 
   if(jQuery('.toanimate').css("right") === "49.2%") {
-    helpAnimate();
+    helpAnimate('.bubthree');
   }
 
   if(jQuery('.toanimate').css("right") === "31.2%") {
-    helpAnimate();
+    helpAnimate('.bubfour');
   }
 
   if(jQuery('.toanimate').css("right") === "13.2%") {
-    helpAnimate();
-  }*/
+    helpAnimate('.bubfive');
+  }
 
   jQuery("div.panel-heading").css( "padding", "0 0 0 0" );
   

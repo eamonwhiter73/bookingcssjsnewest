@@ -109,7 +109,6 @@ body {
     background: #fff;
     position: absolute;
     z-index: 5;
-    margin-left: 3%;
     border-style: solid;
     border-color: white;
     border-width: 1px;
@@ -179,6 +178,9 @@ body {
 }
 
 /*CIRCLE IDENTIFIER CLASSES*/
+.bubone {
+    margin-left: 3%;
+}
 .bubtwo {
     margin-left: 21%;
 }
@@ -280,7 +282,7 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 
 #infoPanelBPmobile{
     background-color: rgb(231,252,255);
-    width: 92%;
+    width: 100%;
     display: inline-block;
     margin-left: 0;
     margin-right: 0;
@@ -328,15 +330,28 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 
 #logo-slider-wraper { margin: 0 auto; }
 
+@media (min-width: 1200px) {
+    /*NOTHING HAPPENS*/
+    #infoPanelBPmobile {
+        display: none;
+    }
+}
+
 /* Landscape tablets and medium desktops */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-
+    /*NOTHING HAPPENS*/
+    #infoPanelBPmobile {
+        display: none;
+    }
 }
 
 /* Portrait tablets and small desktops */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .logo {
         margin-right: 0;
+    }
+    #infoPanelBPmobile {
+        display: none;
     }
 }
 
@@ -353,7 +368,7 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
         background: #fff;
         position: absolute;
         z-index: 5;
-        margin-left: 3%;
+        
         border-style: solid;
         border-color: white;
         border-width: 1px;
@@ -430,7 +445,7 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
         background: #fff;
         position: absolute;
         z-index: 5;
-        margin-left: 3%;
+        
         border-style: solid;
         border-color: white;
         border-width: 1px;
@@ -506,6 +521,7 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 
 /* Portrait phones and smaller */
 @media (max-width: 320px) {
+    /*DOESNT LIKE MARGIN-LEFT*/
     .circle {
         width: 4vh;
         height:0;
@@ -517,7 +533,6 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
         background: #fff;
         position: absolute;
         z-index: 5;
-        margin-left: 3%;
         border-style: solid;
         border-color: white;
         border-width: 1px;
