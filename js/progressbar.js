@@ -1017,7 +1017,7 @@ jQuery(document).ready(function() {
 
   jQuery('#qa-area > div.answers > .btn-zingtree').hover(function(){
     var infoHover = jQuery(this).text();
-    var infoPanelHTML = "<p>This is the info panel for: " + infoHover + "</p>";
+    var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {"+infoHover+"}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><iframe width='200vw' height='160vh' src='https://www.youtube.com/embed/V6PCsyK1TCo' frameborder='0' allowfullscreen></iframe></div></div>";
     
     jQuery('div#infoPanelBP').html(infoPanelHTML);
   });
