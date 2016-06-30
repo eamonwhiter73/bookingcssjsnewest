@@ -331,7 +331,7 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 #logo-slider-wraper { margin: 0 auto; }
 
 .foriframe {
-    width: 50%;
+    width: 35%;
     height: auto;
     z-index: 9999;
     position: absolute;
@@ -674,6 +674,40 @@ a.youtube {
 
 /* Portrait phones and smaller */
 @media (max-width: 320px) {
+    .foriframe {
+        width: 50%;
+        height: auto;
+        z-index: 9999;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        margin-top: 2vh;
+    }
+
+    .exactlyis {
+        background-color: rgba(231,252,255, 1.0); 
+        z-index: 999;
+        height: 15%;
+        padding-top: 3vh;
+        color: #000;
+        font-style: bold;
+        font-size: 4vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: center;
+    }
+
+    .exactsub {
+        background-color: rgba(231,252,255, 1.0); 
+        z-index: 999;
+        height: 15%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 2vh;
+        font-size: 2.5vh;
+        color: #000;
+    }
 
     #infoPanelBPmobile{
         width: 100vw;

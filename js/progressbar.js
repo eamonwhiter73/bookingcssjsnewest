@@ -1051,10 +1051,11 @@ jQuery(document).ready(function($) {
   });
 
   //smooth scroll to infopanel when clicked
-  $(".toolTipBP").click(function() {
+  $(".toolTipBP").click(function(e) {
     $('html, body').animate({
       scrollTop: $(this).offset().top-500
     }, 2000);
+    event.stopPropagation();
   });
 
   //fadeout expose code for focusing on elements and blacking out screen
