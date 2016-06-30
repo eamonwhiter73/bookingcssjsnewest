@@ -3,96 +3,111 @@ jQuery(document).ready(function($) {
 
   function changePaddingPanelBody() {
 
-      /*$('div#node-433800199-1>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "0vh"
-      });
+    /*$('div#node-433800199-1>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "0vh"
+    });
 
-      $('div#node-433800199-2>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "0vh"
-      });
+    $('div#node-433800199-2>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "0vh"
+    });
 
-      $('div#node-433800199-3>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "0vh"
-      });
+    $('div#node-433800199-3>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "0vh"
+    });
 
-      $('div#node-433800199-4>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "0vh"
-      });
+    $('div#node-433800199-4>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "0vh"
+    });
 
-      $('div#node-433800199-5>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "0vh"
-      });*/
+    $('div#node-433800199-5>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "0vh"
+    });*/
 
-      $('div#node-433800199-7>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "2vh"
-      });
+    $('div#node-433800199-7>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "2vh"
+    });
 
-      $('div#node-433800199-9>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "2vh"
-      });
+    $('div#node-433800199-9>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "2vh"
+    });
 
-      $('div#node-433800199-16>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "2vh"
-      });
+    $('div#node-433800199-16>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "2vh"
+    });
 
-      $('div#node-433800199-17>.row>.col-md-12>.panel-primary>.panel-body').css({
-        "padding": "2vh"
-      });
+    $('div#node-433800199-17>.row>.col-md-12>.panel-primary>.panel-body').css({
+      "padding": "2vh"
+    });
 
-      $('div#node-433800199-13>.row>.col-md-12>.panel-primary>.panel-body>#node-content').empty();
+    $('div#node-433800199-13>.row>.col-md-12>.panel-primary>.panel-body>#node-content').empty();
 
+  }
+
+  jQuery('body').on("swipeleft",function(e){
+    console.log(arraypicked);
+
+    console.log(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')))]);
+
+    var thisone = arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'));
+    
+    jQuery('div#' + arraypicked[parseInt(thisone)]).css('display', 'none');
+    
+    console.log(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'))) + 1]);
+
+    if(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'))) + 1 ]) {
+
+      if(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')) == arraypicked.lastIndexOf(jQuery('.zingtree-node:visible').prop('id'))) {
+
+        jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "");
+        jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "block");
+      }
+      else {
+
+        thisone = arraypicked.lastIndexOf(jQuery('.zingtree-node:visible').prop('id'));
+
+        jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "");
+        jQuery('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "block");
+      }
     }
-  
+    
+    e.preventDefault();
+  });
+
+  jQuery('body').on("swiperight",function(e){
+    console.log(arraypicked);
+
+    console.log(arraypicked[parseInt(arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id')))]);
+
+    var thisone = arraypicked.indexOf(jQuery('.zingtree-node:visible').prop('id'));
+    
+    jQuery('div#' + arraypicked[parseInt(thisone)]).css('display', 'none');
+
+    jQuery('div#' + arraypicked[parseInt(thisone)  - 1 ] + '.zingtree-node').css("display", "");
+    jQuery('div#' + arraypicked[parseInt(thisone)  - 1 ] + '.zingtree-node').css("display", "block");
+
+
+    
+    
+    
+    e.preventDefault();
+  });
+
+
+  $('.toolTipBP').click(function(e) {
+
+    var infoHover = $(this).text();
+    var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><iframe width='200vw' height='160vh' src='https://www.youtube.com/embed/V6PCsyK1TCo' frameborder='0' allowfullscreen></iframe></div></div>";
+    
+    $('div#infoPanelBP').html(infoPanelHTML);
+
+    e.preventDefault(); 
+  });
+
   $(window).load(function() {
 
     changePaddingPanelBody();
 
     //SWIPE FUNCTIONS
-
-    var thisone = arraypicked.indexOf($('.zingtree-node:visible').prop('id'));
-
-    $('body').on("swipeleft",function(e){
-      
-      console.log(arraypicked);
-      
-      $('div#' + arraypicked[parseInt(thisone)]).css('display', 'none');
-      
-      if(arraypicked[parseInt(thisone) + 1 ]) {
-
-        if(thisone == arraypicked.lastIndexOf($('.zingtree-node:visible').prop('id'))) {
-          $('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "");
-          $('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "block");
-        }
-        else {
-          thisone = arraypicked.lastIndexOf($('.zingtree-node:visible').prop('id'));
-
-          $('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "");
-          $('div#' + arraypicked[parseInt(thisone)  + 1 ] + '.zingtree-node').css("display", "block");
-        }
-      }
-      
-      e.preventDefault();
-    });
-
-    $('body').on("swiperight",function(e){
-      console.log(arraypicked);
-      
-      $('div#' + arraypicked[parseInt(thisone)]).css('display', 'none');
-      $('div#' + arraypicked[parseInt(thisone)  - 1 ] + '.zingtree-node').css("display", "");
-      $('div#' + arraypicked[parseInt(thisone)  - 1 ] + '.zingtree-node').css("display", "block");
-
-      e.preventDefault();
-    });
-
-    $('.toolTipBP').click(function(e) {
-
-      var infoHover = $(this).text();
-      var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><iframe width='200vw' height='160vh' src='https://www.youtube.com/embed/V6PCsyK1TCo' frameborder='0' allowfullscreen></iframe></div></div>";
-      
-      $('div#infoPanelBP').html(infoPanelHTML);
-
-      e.preventDefault(); 
-    });
 
     if($(window).width() < 321) {
       //HIDE AND SHOW
@@ -1055,7 +1070,6 @@ jQuery(document).ready(function($) {
     $('html, body').animate({
       scrollTop: $(this).offset().top-500
     }, 2000);
-    event.stopPropagation();
   });
 
   //fadeout expose code for focusing on elements and blacking out screen

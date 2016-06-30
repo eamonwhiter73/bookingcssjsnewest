@@ -414,44 +414,55 @@ a.youtube {
 
 /* Portrait phones and smaller */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .foriframe {
+        width: 40%;
+        height: auto;
+        z-index: 9999;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        margin-top: 2vh;
+    }
+
     .exactly {
         background-color: rgb(231,252,255);
-            z-index: 99998;
-            height: 100%;
-            position: relative;
+        z-index: 99998;
+        height: 100%;
+        position: relative;
 
     }
 
     .exactlyis {
         background-color: rgb(231,252,255);   
-            z-index: 99998;
-            height: 20%;
-            padding-top: 6vh;
-            color: #000;
-            font-style: bold;
-            font-size: 3vh;
-            padding-left: 9vw;
-            padding-right: 9vw;
+        z-index: 99998;
+        height: 20%;
+        padding-top: 6vh;
+        color: #000;
+        font-style: bold;
+        font-size: 3vh;
+        padding-left: 9vw;
+        padding-right: 9vw;
 
     }
 
     .exactsub {
         background-color: rgb(231,252,255);  
-            z-index: 99998;
-            height: 20%;
-            padding-left: 9vw;
-            padding-right: 9vw;
-            color: #000;
+        z-index: 99998;
+        height: 20%;
+        padding-left: 9vw;
+        padding-right: 9vw;
+        color: #000;
             
  
     }
 
     .panelvid {
         background-color: rgb(231,252,255) ;
-            z-index: 99998;
-            height: 50%;
-            width: 100%;
-            position: relative;
+        z-index: 99998;
+        height: 50%;
+        width: 100%;
+        position: relative;
             
   
     }
@@ -537,44 +548,55 @@ a.youtube {
 
 /* Portrait phones and smaller */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
+    .foriframe {
+        width: 40%;
+        height: auto;
+        z-index: 9999;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        margin-top: 2vh;
+    }
+
     .exactly {
         background-color: rgb(231,252,255);
-            z-index: 99998;
-            height: 100%;
-            position: relative;
+        z-index: 99998;
+        height: 100%;
+        position: relative;
 
     }
 
     .exactlyis {
         background-color: rgb(231,252,255);   
-            z-index: 99998;
-            height: 20%;
-            padding-top: 6vh;
-            color: #000;
-            font-style: bold;
-            font-size: 3vh;
-            padding-left: 9vw;
-            padding-right: 9vw;
+        z-index: 99998;
+        height: 20%;
+        padding-top: 6vh;
+        color: #000;
+        font-style: bold;
+        font-size: 3vh;
+        padding-left: 9vw;
+        padding-right: 9vw;
 
     }
 
     .exactsub {
         background-color: rgb(231,252,255);  
-            z-index: 99998;
-            height: 20%;
-            padding-left: 9vw;
-            padding-right: 9vw;
-            color: #000;
+        z-index: 99998;
+        height: 20%;
+        padding-left: 9vw;
+        padding-right: 9vw;
+        color: #000;
             
  
     }
 
     .panelvid {
         background-color: rgb(231,252,255) ;
-            z-index: 99998;
-            height: 50%;
-            width: 100%;
-            position: relative;
+        z-index: 99998;
+        height: 50%;
+        width: 100%;
+        position: relative;
             
   
     }
@@ -675,7 +697,7 @@ a.youtube {
 /* Portrait phones and smaller */
 @media (max-width: 320px) {
     .foriframe {
-        width: 50%;
+        width: 40%;
         height: auto;
         z-index: 9999;
         position: absolute;
