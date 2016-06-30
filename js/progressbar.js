@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
       $('.toolTipBP').click(function(e) {
 
         var infoHover = $(this).text();
-        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><iframe width='200vw' height='160vh' src='https://www.youtube.com/embed/V6PCsyK1TCo' frameborder='0' allowfullscreen></iframe></div></div>";
+        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><a class='youtube' href='http://www.youtube.com/embed/V6PCsyK1TCo?rel=0'><img class='foriframe' id='V6PCsyK1TCo' src='http://img.youtube.com/vi/V6PCsyK1TCo/hqdefault.jpg'/></a></div></div>";
         
         $('div#infoPanelBPmobile').html(infoPanelHTML);
 
@@ -219,7 +219,7 @@ jQuery(document).ready(function($) {
       $('.toolTipBP').click(function(e) {
 
         var infoHover = $(this).text();
-        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><iframe width='200vw' height='160vh' src='https://www.youtube.com/embed/V6PCsyK1TCo' frameborder='0' allowfullscreen></iframe></div></div>";
+        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><a class='youtube' href='http://www.youtube.com/embed/V6PCsyK1TCo?rel=0'><img class='foriframe' id='V6PCsyK1TCo' src='http://img.youtube.com/vi/V6PCsyK1TCo/hqdefault.jpg'/></a></div></div>";
         
         $('div#infoPanelBPmobile').html(infoPanelHTML);
 
@@ -405,7 +405,7 @@ jQuery(document).ready(function($) {
     }
 
     if($(window).width() > 768 && $(window).width() < 992) {
-      $('.logo').show();
+      $('.logo').hide();
       $('div#title_row').show(); 
       $('#main-footer').show();
       $('h1.entry-title').show();
@@ -497,7 +497,7 @@ jQuery(document).ready(function($) {
       $('.toolTipBP').click(function(e) {
 
         var infoHover = $(this).text();
-        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><iframe width='200vw' height='160vh' src='https://www.youtube.com/embed/V6PCsyK1TCo' frameborder='0' allowfullscreen></iframe></div></div>";
+        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><a class='youtube' href='http://www.youtube.com/embed/V6PCsyK1TCo?rel=0'><img class='foriframe' id='V6PCsyK1TCo' src='http://img.youtube.com/vi/V6PCsyK1TCo/hqdefault.jpg'/></a></div></div>";
         
         $('div#infoPanelBPmobile').html(infoPanelHTML);
 
@@ -606,7 +606,7 @@ jQuery(document).ready(function($) {
       $('.toolTipBP').click(function(e) {
 
         var infoHover = $(this).text();
-        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><iframe width='200vw' height='160vh' src='https://www.youtube.com/embed/V6PCsyK1TCo' frameborder='0' allowfullscreen></iframe></div></div>";
+        var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><a class='youtube' href='http://www.youtube.com/embed/V6PCsyK1TCo?rel=0'><img class='foriframe' id='V6PCsyK1TCo' src='http://img.youtube.com/vi/V6PCsyK1TCo/hqdefault.jpg'/></a></div></div>";
         
         $('div#infoPanelBPmobile').html(infoPanelHTML);
 
@@ -802,7 +802,8 @@ jQuery(document).ready(function($) {
       $('div#title_row').show(); 
       $('#main-footer').show();
       $('h1.entry-title').show();
-      $('.widewrapper>.container>.row').show(); 
+      $('.widewrapper>.container>.row').show();
+      $('.infoPanelBPmobile').hide(); 
 
 
       $('a.btn-zingtree.list-group-item').css({
@@ -1017,7 +1018,7 @@ jQuery(document).ready(function($) {
 
   $('#qa-area > div.answers > .btn-zingtree').hover(function(){
     var infoHover = $(this).text();
-    var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><a class='youtube' href='http://www.youtube.com/embed/V6PCsyK1TCo?rel=0?width=650&height=480&iframe=true'><img class='foriframe' id='V6PCsyK1TCo' src='http://img.youtube.com/vi/V6PCsyK1TCo/hqdefault.jpg'/></a></div></div>";
+    var infoPanelHTML = "<div class='exactly'><div class='exactlyis'>So what exactly is a {video}?</div><div class='exactsub'>Info blurb about how this service will benefit them, brief explanation, needcopy.</div><div class='panelvid'><a class='youtube' href='http://www.youtube.com/embed/V6PCsyK1TCo?rel=0'><img class='foriframe' id='V6PCsyK1TCo' src='http://img.youtube.com/vi/V6PCsyK1TCo/hqdefault.jpg'/></a></div></div>";
     
     $('div#infoPanelBP').html(infoPanelHTML);
   });
