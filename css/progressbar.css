@@ -330,53 +330,6 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
 
 #logo-slider-wraper { margin: 0 auto; }
 
-/*a.link {
-    cursor: pointer; cursor: hand;
-        width: 32%;
-    height: 75%;
-    z-index: 9999;
-    position: absolute;
-    margin: 0 auto;
-  left: 0;
-  right: 0;
-}*/
-
-.popup {
-    position:absolute;
-    z-index:2;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-    opacity:0;
-    visibility:hidden;
-    transition:.3s ease;
-}
-
-.show-popup .popup {
-    opacity:1;
-    visibility: visible;    
-}
-
-.popup > iframe {
-    position:absolute;
-    top:50px;
-    left:50%;
-    margin-left:-280px;
-}
-
-.cover{
-    width: 32%;
-    height: 75%;
-    background-color: rgba(231,252,255, 0.0);
-    z-index: 10000;
-    position: absolute;
-    margin: 0 auto;
-  left: 0;
-  right: 0;
-}
-
 .foriframe {
     width: 32%;
     height: 75%;
@@ -386,6 +339,10 @@ fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Fon
   left: 0;
   right: 0;
 
+}
+
+a.youtube {
+    cursor: pointer; cursor: hand;
 }
 
 .exactly {
